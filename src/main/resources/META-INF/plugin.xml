@@ -25,7 +25,7 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
-        <localInspection implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"/>
+        <localInspection language="JAVA" implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"/>
     </extensions>
 
     <actions>
