@@ -1,0 +1,35 @@
+<idea-plugin>
+<id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
+<name>Akka Log Inspections</name>
+<version>1.0</version>
+<vendor email="steve.jagodzinski@gmail.com" url="https://github.com/stevejagodzinski/">Steve Jagodzinski</vendor>
+
+<description><![CDATA[
+      Checks that the number of parameters to akka logging match the number of placeholders.
+      Ensures that when using log().error with a Throwable, that the throwable is passed before the message in the
+      method signature.
+    ]]></description>
+
+<change-notes><![CDATA[
+      2019-10-31 Initial release........................
+    ]]>
+</change-notes>
+
+<!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+<idea-version since-build="173.0"/>
+
+<!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+     on how to target different products -->
+<!-- uncomment to enable plugin in all products
+<depends>com.intellij.modules.lang</depends>
+-->
+
+<extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+</extensions>
+
+<actions>
+    <!-- Add your actions here -->
+</actions>
+
+</idea-plugin>
