@@ -11,11 +11,13 @@ class LogMethodVisitor(private val holder: ProblemsHolder) : JavaElementVisitor(
         super.visitMethodCallExpression(expression)
 
         if (isLogMethod(expression) == true) {
-            checkMethodArguments(expression)
+            alwaysViolate(expression)
         }
     }
 
-    private fun checkMethodArguments(expression: PsiMethodCallExpression?) {
-
+        private fun alwaysViolate(expression: PsiMethodCallExpression?) {
+            if (expression != null) {
+                holder.registerProblem(expression, LogPlaceholderInspection.DESCRIPTION_TEMPLATE)
+            }
     }
 }
