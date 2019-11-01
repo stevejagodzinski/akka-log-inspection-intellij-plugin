@@ -6,6 +6,6 @@ import com.intellij.psi.PsiElementVisitor
 
 class LogPlaceholderInspection : LocalInspectionTool() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
-        return LogMethodVisitor()
+        return LogMethodVisitor(holder)
     }
 }
