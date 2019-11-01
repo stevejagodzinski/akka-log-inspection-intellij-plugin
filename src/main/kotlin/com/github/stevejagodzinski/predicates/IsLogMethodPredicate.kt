@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.inspection
+package com.github.stevejagodzinski.predicates
 
 import com.intellij.psi.PsiClassType
 import com.intellij.psi.PsiMethodCallExpression

@@ -1,6 +1,6 @@
 package com.github.stevejagodzinski.inspection
 
-import com.github.stevejagodzinski.inspection.IsLogMethodPredicate.isLogMethod
+import com.github.stevejagodzinski.predicates.IsLogMethodPredicate.isLogMethod
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.JavaElementVisitor
 import com.intellij.psi.PsiMethodCallExpression
