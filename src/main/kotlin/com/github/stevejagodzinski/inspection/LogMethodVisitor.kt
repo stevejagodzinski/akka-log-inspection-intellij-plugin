@@ -9,12 +9,12 @@ class LogMethodVisitor(private val holder: ProblemsHolder) : JavaElementVisitor(
         super.visitMethodCallExpression(expression)
 
         if (isLogMethod(expression) == true) {
-            checkMethodArguments(expression);
+            checkMethodArguments(expression)
         }
     }
 
     private fun isLogMethod(expression: PsiMethodCallExpression?): Boolean? {
-        return IsLogMethodPredicate.isLogMethod(expression);
+        return IsLogMethodPredicate.isLogMethod(expression)
     }
 
     private fun checkMethodArguments(expression: PsiMethodCallExpression?) {
