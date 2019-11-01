@@ -31,7 +31,7 @@
                 displayName="Calls to akka log have mismatched number of parameters"
                 enabledByDefault="true"
                 level="WARNING"
-        />
+                groupName="Logging"/>
     </extensions>
 
     <actions>
