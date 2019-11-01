@@ -17,7 +17,7 @@ class LogMethodVisitor : JavaElementVisitor() {
     private fun isLogMethod(expression: PsiMethodCallExpression?): Boolean? {
         val returnType = getReturnType(expression)
         val loggingAdapterType = PsiClassType.getTypeByName("akka.event.LoggingAdapter", expression!!.project, expression.resolveScope)
-        return returnType?.isAssignableFrom(loggingAdapterType);
+        return returnType?.isAssignableFrom(loggingAdapterType)
     }
 
     private fun getReturnType(expression: PsiMethodCallExpression?): PsiType? {
