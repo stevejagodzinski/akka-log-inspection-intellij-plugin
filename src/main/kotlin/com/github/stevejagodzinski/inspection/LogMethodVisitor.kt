@@ -15,9 +15,9 @@ class LogMethodVisitor(private val holder: ProblemsHolder) : JavaElementVisitor(
         }
     }
 
-        private fun alwaysViolate(expression: PsiMethodCallExpression?) {
-            if (expression != null) {
-                holder.registerProblem(expression, LogPlaceholderInspection.DESCRIPTION_TEMPLATE)
-            }
+    private fun alwaysViolate(expression: PsiMethodCallExpression?) {
+        if (expression != null) {
+            holder.registerProblem(expression, LogPlaceholderInspection.DESCRIPTION_TEMPLATE)
+        }
     }
 }
