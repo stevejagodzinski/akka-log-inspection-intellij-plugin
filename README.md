@@ -31,4 +31,4 @@ In the next example too many arguments are passed to the log method:
 ```java
 log().info("Message {} received from {}", message, sender(), System.currentTimeMillis());
 ```
-With this plugin, such violations will be highlighted within the IntelliJ IDE so that you can know about and correct these issues before early-on.
+With this plugin, such violations will be highlighted within the IntelliJ IDE so that you can know about, and correct these issues before early-on.
