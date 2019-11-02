@@ -1,6 +1,6 @@
 # akka-log-inspection-plugin
 
-### This plugin provides code inspections to highlight invocations to Akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
+#### This plugin provides code inspections to highlight invocations to Akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
 
 Akka's logging library does not follow conventional the SLF4J pattern:
 ```java
