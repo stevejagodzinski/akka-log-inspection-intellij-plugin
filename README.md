@@ -24,7 +24,7 @@ log().info("Message {} received from {}", message);
 
 In the example above, sender was not provided as a parameter to the log method. The template expects two parameters, but only one is provided.
 
-In the next example we pass too many arguments to the log method:
+In the next example too many arguments are passed to the log method:
 ```java
 log().info("Message {} received from {}", message, sender(), System.currentTimeMillis());
 ```
