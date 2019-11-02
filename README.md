@@ -22,7 +22,7 @@ log().info("Message with parameters {} {}", param1, param2);
 log().info("Message {} received from {}", message);
 ```
 
-We forgot to include the sender as a parameter to the log method.
+In the example above, sender was not provided as a parameter to the log method. The template expects two parameters, but only one is provided.
 
 In the next example we pass too many arguments to the log method:
 ```java
