@@ -29,4 +29,4 @@ In the next example too many arguments are passed to the log method:
 log().info("Message {} received from {}", message, sender(), System.currentTimeMillis());
 ```
 
-This plugin will allow you to provide code inspections to highlight invocations to akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
+This plugin provides code inspections to highlight invocations to Akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
