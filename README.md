@@ -1,6 +1,6 @@
 # akka-log-inspection-plugin
 
-Logging using Akka's logging library does not follow conventional the SLF4J pattern:
+Akka's logging library does not follow conventional the SLF4J pattern:
 ```java
 LOG.error("Some message", exception);
 ```
