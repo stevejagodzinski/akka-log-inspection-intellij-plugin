@@ -12,12 +12,12 @@ log().error("Message {}", exception);
 log().error(exception, "Message with parameters {} {}", param1, param2);
 log().error("Message with parameters {} {} {}", param1, param2, exception);
 ```
-WARN, INFO, and DEBUG logs follow SLF4J's pattern:
+WARN, INFO, and DEBUG **do** log follow SLF4J's pattern:
 ```java
 log().info("Message with parameters {} {}", param1, param2);
 ```
 
-However, SLF4J has an advantage that tooling like SonarLint/SonarQube can detect cases where the number of placeholders do not match the number of parameters. \
+**However**, SLF4J has an advantage that tooling like SonarLint/SonarQube can detect cases where the number of placeholders do not match the number of parameters. \
 Take the following example:
 ```java
 log().info("Message {} received from {}", message);
