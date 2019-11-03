@@ -26,9 +26,10 @@
         <localInspection
                 language="JAVA"
                 implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"
-                displayName="Calls to akka log have mismatched number of parameters"
+                displayName="Number of placeholders does not match number of arguments in Akka logging call"
                 enabledByDefault="true"
                 level="WARNING"
+                groupPath="Java"
                 groupName="Logging"/>
     </extensions>
 
