@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.actor;
+package com.github.stevejagodzinski.aliip.actor;
 
 import akka.actor.AbstractLoggingActor;
 import akka.japi.pf.ReceiveBuilder;

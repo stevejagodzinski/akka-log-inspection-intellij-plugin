@@ -1,6 +1,6 @@
-package com.github.stevejagodzinski.filters
+package com.github.stevejagodzinski.aliip.filters
 
-import com.github.stevejagodzinski.predicates.IsString.isString
+import com.github.stevejagodzinski.aliip.predicates.IsString.isString
 import com.intellij.psi.PsiExpression
 import com.intellij.psi.PsiLiteralValue
 import com.intellij.psi.PsiMethodCallExpression

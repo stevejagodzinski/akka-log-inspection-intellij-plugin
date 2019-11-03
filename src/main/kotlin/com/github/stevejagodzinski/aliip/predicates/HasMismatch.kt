@@ -1,8 +1,8 @@
-package com.github.stevejagodzinski.predicates
+package com.github.stevejagodzinski.aliip.predicates
 
-import com.github.stevejagodzinski.counters.CountParameters.countParameters
-import com.github.stevejagodzinski.counters.CountPlaceholders.countPlaceholders
-import com.github.stevejagodzinski.filters.FindTemplate.findTemplate
+import com.github.stevejagodzinski.aliip.counters.CountParameters.countParameters
+import com.github.stevejagodzinski.aliip.counters.CountPlaceholders.countPlaceholders
+import com.github.stevejagodzinski.aliip.filters.FindTemplate.findTemplate
 import com.intellij.psi.PsiMethodCallExpression
 
 object HasMismatch {

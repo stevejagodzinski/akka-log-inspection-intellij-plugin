@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.predicates
+package com.github.stevejagodzinski.aliip.predicates
 
 import com.intellij.psi.PsiClassType
 import com.intellij.psi.PsiMethodCallExpression

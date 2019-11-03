@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.inspection
+package com.github.stevejagodzinski.aliip.inspection
 
 import com.intellij.codeInspection.LocalInspectionTool
 import com.intellij.codeInspection.ProblemsHolder

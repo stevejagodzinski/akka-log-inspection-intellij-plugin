@@ -1,7 +1,7 @@
-package com.github.stevejagodzinski.inspection
+package com.github.stevejagodzinski.aliip.inspection
 
-import com.github.stevejagodzinski.predicates.HasMismatch.hasMismatch
-import com.github.stevejagodzinski.predicates.IsLogMethod.isLogMethod
+import com.github.stevejagodzinski.aliip.predicates.HasMismatch.hasMismatch
+import com.github.stevejagodzinski.aliip.predicates.IsLogMethod.isLogMethod
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.JavaElementVisitor
 import com.intellij.psi.PsiMethodCallExpression

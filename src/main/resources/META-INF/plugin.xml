@@ -28,7 +28,7 @@
                 enabledByDefault="true"
                 groupName="Logging"
                 groupPath="Java"
-                implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"
+                implementationClass="com.github.stevejagodzinski.aliip.inspection.LogPlaceholderInspection"
                 language="JAVA"
                 level="WARNING"
                 shortName="log-placeholder-inspection"

@@ -1,6 +1,6 @@
-package com.github.stevejagodzinski.counters
+package com.github.stevejagodzinski.aliip.counters
 
-import com.github.stevejagodzinski.index.TemplateIndex.templateIndex
+import com.github.stevejagodzinski.aliip.index.TemplateIndex.templateIndex
 import com.intellij.psi.PsiMethodCallExpression
 
 object CountParameters {

@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.counters
+package com.github.stevejagodzinski.aliip.counters
 
 object CountPlaceholders {
     fun countPlaceholders(template: String): Int {
