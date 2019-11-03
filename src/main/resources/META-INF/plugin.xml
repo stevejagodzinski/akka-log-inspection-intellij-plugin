@@ -24,13 +24,14 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <localInspection
-                language="JAVA"
-                implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"
                 displayName="Number of placeholders does not match number of arguments in Akka logging call"
                 enabledByDefault="true"
-                level="WARNING"
+                groupName="Logging"
                 groupPath="Java"
-                groupName="Logging"/>
+                implementationClass="com.github.stevejagodzinski.inspection.LogPlaceholderInspection"
+                language="JAVA"
+                level="WARNING"
+        />
     </extensions>
 
     <actions>
