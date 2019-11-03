@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
     <name>Akka Log Inspections</name>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <vendor email="steve.jagodzinski@gmail.com" url="https://github.com/stevejagodzinski/">Steve Jagodzinski</vendor>
 
     <description><![CDATA[
