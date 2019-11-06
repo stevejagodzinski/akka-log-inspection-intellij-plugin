@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/stevejagodzinski/akka-log-inspection-intellij-plugin">
     <id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
     <name>Akka Log Inspections</name>
-    <version>1.0.7-SNAPSHOT</version>
+    <version>1.1.1-SNAPSHOT</version>
     <vendor email="steve.jagodzinski@gmail.com" url="https://github.com/stevejagodzinski/">Steve Jagodzinski</vendor>
 
     <description>
@@ -9,7 +9,7 @@
     </description>
 
     <change-notes><![CDATA[
-    Changed the inspection description to match that of the SLF4J inspection.
+    Added inspection when Throwable is not provided as first argument to log().error(Throwable, String, Object...)
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
