@@ -9,7 +9,7 @@
     </description>
 
     <change-notes><![CDATA[
-    Added inspection when Throwable is not provided as first argument to log().error(Throwable, String, Object...)
+    Fix backward type checking for log type hierarchies.
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
