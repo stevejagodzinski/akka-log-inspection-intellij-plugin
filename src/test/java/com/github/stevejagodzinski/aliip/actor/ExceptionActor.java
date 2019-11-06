@@ -4,7 +4,6 @@ import akka.actor.AbstractLoggingActor;
 import akka.japi.pf.ReceiveBuilder;
 
 @SuppressWarnings("unused")
-
 public class ExceptionActor extends AbstractLoggingActor {
     @Override
     public Receive createReceive() {return new ReceiveBuilder().build();}
