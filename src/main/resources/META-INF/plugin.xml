@@ -1,4 +1,4 @@
-<idea-plugin>
+<idea-plugin url="https://github.com/stevejagodzinski/akka-log-inspection-intellij-plugin">
     <id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
     <name>Akka Log Inspections</name>
     <version>1.0.3-SNAPSHOT</version>
@@ -9,9 +9,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      2019-10-31 1.0.0 Initial release
-      2019-11-02 1.0.1 +Inspection description
-      2019-11-02 1.0.2 +Release Notes
+      Corrected the format of change-notes within plugin.xml
     ]]>
     </change-notes>
 
