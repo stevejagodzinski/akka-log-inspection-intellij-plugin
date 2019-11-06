@@ -6,7 +6,7 @@ import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.JavaElementVisitor
 import com.intellij.psi.PsiMethodCallExpression
 
-open class LogMethodVisitor(
+class LogMethodVisitor(
         private val holder: ProblemsHolder,
         private val createViolation: (expression: PsiMethodCallExpression) -> Violation
 ) : JavaElementVisitor() {
