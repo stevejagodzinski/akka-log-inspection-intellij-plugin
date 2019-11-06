@@ -1,4 +1,4 @@
-package com.github.stevejagodzinski.aliip.inspection
+package com.github.stevejagodzinski.aliip.inspection.visitor
 
 import com.github.stevejagodzinski.aliip.predicates.IsLogMethod.isLogMethod
 import com.github.stevejagodzinski.aliip.violation.Violation

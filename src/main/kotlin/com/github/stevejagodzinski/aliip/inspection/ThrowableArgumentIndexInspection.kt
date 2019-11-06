@@ -1,5 +1,6 @@
 package com.github.stevejagodzinski.aliip.inspection
 
+import com.github.stevejagodzinski.aliip.inspection.visitor.LogMethodVisitor
 import com.github.stevejagodzinski.aliip.violation.ThrowableArgumentIndexViolation
 import com.intellij.codeInspection.LocalInspectionTool
 import com.intellij.codeInspection.ProblemsHolder
