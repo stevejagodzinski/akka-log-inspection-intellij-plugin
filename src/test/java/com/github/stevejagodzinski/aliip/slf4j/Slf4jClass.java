@@ -8,6 +8,6 @@ public class Slf4jClass {
     private static final Logger LOG = LoggerFactory.getLogger(Slf4jClass.class);
 
     public static void handleExtraPlaceholder(final Exception e) {
-        LOG.error("Log the exception using a placeholder {} {}", new Object());
+        LOG.error("Too many placeholders {} {}", new Object());
     }
 }
