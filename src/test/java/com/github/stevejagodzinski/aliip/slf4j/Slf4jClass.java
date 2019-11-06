@@ -10,4 +10,8 @@ public class Slf4jClass {
     public static void handleExtraPlaceholder(final Exception e) {
         LOG.error("Too many placeholders {} {}", new Object());
     }
+
+    public static void handleExtraParameters(final Exception e) {
+        LOG.error("Too many placeholders", new Object());
+    }
 }
