@@ -1,23 +1,24 @@
 <idea-plugin url="https://github.com/stevejagodzinski/akka-log-inspection-intellij-plugin">
     <id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
     <name>Akka Log Inspections</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <vendor email="steve.jagodzinski@gmail.com" url="https://github.com/stevejagodzinski/">Steve Jagodzinski</vendor>
 
     <description>
       Provides code inspections to highlight invocations to Akka&#39;s logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
     </description>
 
-    <change-notes>Corrected the format of change-notes within plugin.xml</change-notes>
+    <change-notes><![CDATA[
+    Added java dependency to plugin.xml<br/>
+    Removed gradle configuration which was overriding changes note from plugin.xml]]>
+    </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <localInspection

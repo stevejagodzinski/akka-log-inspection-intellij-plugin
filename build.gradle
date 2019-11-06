@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.stevejagodzinski'
-version '1.0.4'
+version '1.0.5'
 
 sourceCompatibility = 1.11
 
@@ -23,9 +23,4 @@ dependencies {
 intellij {
     plugins = ['java']
     version '2019.2.4'
-}
-patchPluginXml {
-    changeNotes """
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>"""
 }
