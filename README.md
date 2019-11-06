@@ -4,9 +4,9 @@
 This IntelliJ plugin provides code inspections to highlight invocations to Akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
 
 ## Download
-### Directly From Your IDE
+#### Directly From Your IDE
 Settings/Preferences -> Plugins -> Marketplace -> Search -> Akka Log Inspections
-### From The JetBrainsPlugin Repo
+#### From The JetBrainsPlugin Repo
 [Akka Log Inspections](https://plugins.jetbrains.com/plugin/13266-akka-log-inspections/)
 
 ## Why
