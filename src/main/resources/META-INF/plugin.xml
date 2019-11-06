@@ -1,17 +1,14 @@
 <idea-plugin url="https://github.com/stevejagodzinski/akka-log-inspection-intellij-plugin">
     <id>com.github.stevejagodzinski.akka-log-inspection-plugin</id>
     <name>Akka Log Inspections</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <vendor email="steve.jagodzinski@gmail.com" url="https://github.com/stevejagodzinski/">Steve Jagodzinski</vendor>
 
-    <description><![CDATA[
-      Provides code inspections to highlight invocations to Akka's logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
-    ]]></description>
+    <description>
+      Provides code inspections to highlight invocations to Akka&#39;s logging framework where the number of message placeholders do not match the number of arguments passed to the log method.
+    </description>
 
-    <change-notes><![CDATA[
-      Corrected the format of change-notes within plugin.xml
-    ]]>
-    </change-notes>
+    <change-notes>Corrected the format of change-notes within plugin.xml</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
