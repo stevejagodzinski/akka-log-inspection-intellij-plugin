@@ -30,6 +30,18 @@
                 level="WARNING"
                 shortName="log-placeholder-inspection"
         />
+
+        <localInspection
+                displayName="Throwable should be first argument to log.error in Akka"
+                enabledByDefault="true"
+                groupName="Logging"
+                groupPath="Java"
+                implementationClass="com.github.stevejagodzinski.aliip.inspection.ThrowableArgumentIndexInspection"
+                language="JAVA"
+                level="WARNING"
+                shortName="log-error-throwable"
+        />
+
     </extensions>
 
     <actions>
