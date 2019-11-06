@@ -6,6 +6,9 @@ This IntelliJ plugin provides code inspections to highlight invocations to Akka'
 ## Download
 [JetBrains Plugin Repo](https://plugins.jetbrains.com/plugin/13266-akka-log-inspections/)
 
+From your IDE:
+Settings/Preferences -> Plugins -> Marketplace -> Search -> Akka Log Inspections
+
 ## Why
 Akka's logging library does not follow conventional the SLF4J pattern:
 ```java
