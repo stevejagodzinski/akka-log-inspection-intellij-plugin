@@ -5,7 +5,7 @@ import com.github.stevejagodzinski.aliip.counters.CountPlaceholders.countPlaceho
 import com.github.stevejagodzinski.aliip.filters.FindTemplate.findTemplate
 import com.intellij.psi.PsiMethodCallExpression
 
-object HasMismatch {
+object LogPlaceholderMismatch {
     fun hasMismatch(logExpression: PsiMethodCallExpression): Boolean {
         val templateValue = findTemplate(logExpression)
 
