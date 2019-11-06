@@ -7,7 +7,7 @@ import com.intellij.psi.PsiType
 object IsString {
     fun isString(type: PsiType?, expression: PsiExpression): Boolean {
         val stringType = PsiClassType.getTypeByName("java.lang.String", expression.project, expression.resolveScope)
-        return type?.isAssignableFrom(stringType) ?: false
+        return type?.let { stringType.isAssignableFrom(it) } ?: false
     }
 
     fun isString(expression: PsiExpression): Boolean {

@@ -8,7 +8,7 @@ object IsLogMethod {
     fun isLogMethod(expression: PsiMethodCallExpression?): Boolean {
         val returnType = getReturnType(expression)
         val loggingAdapterType = PsiClassType.getTypeByName("akka.event.LoggingAdapter", expression!!.project, expression.resolveScope)
-        return returnType?.isAssignableFrom(loggingAdapterType) ?: false
+        return returnType?.let { loggingAdapterType.isAssignableFrom(it) } ?: false
     }
 
     private fun getReturnType(expression: PsiMethodCallExpression?): PsiType? {
