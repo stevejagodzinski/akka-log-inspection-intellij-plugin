@@ -1,0 +1,3 @@
+Reports calls to Akka's log.error(String, Object...) where a Throwable is provided to fill in a message placeholder {}.<br />
+When logging at the error level using Akka's logging framework; Throwables should be provided as the first argument to log().error(Throwable, String, Object...)<br />
+Otherwise, stack traces of the provided throwables will not be filled in to the logs.

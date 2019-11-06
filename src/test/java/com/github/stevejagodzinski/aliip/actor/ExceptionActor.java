@@ -9,15 +9,16 @@ public class ExceptionActor extends AbstractLoggingActor {
     @Override
     public Receive createReceive() {return new ReceiveBuilder().build();}
     // Not OK
+    private void exceptionAfterErrorMessageNoPlaceholder(final Exception e) {log().error("Log exception after message", e);}
     private void exceptionAfterErrorMessage(final Exception e) {log().error("Log exception after message {}", e);}
     private void exceptionAfterErrorMessageWithPlaceholder(final Exception e) {log().error("Log exception after message {} {}", new Object(), e);}
-    private void exceptionAfterErrorMessageWithItsPlaceholder(final Exception e) {log().error(e, "Log exception after message");}
 
-    private void exceptionAfterWarnMessage(final Exception e) {log().warning("Log exception after message {}", e);}
+
+    // Exception OK, Placeholder NOK
     private void exceptionAfterWarnMessageWithPlaceholder(final Exception e) {log().warning("Log exception after message {}", new Object(), e);}
     private void exceptionAfterWarnMessageWithItsPlaceholder(final Exception e) {log().warning("Log exception after message {} {}", e);}
 
     // Ok
+    private void exceptionAfterErrorMessageWithItsPlaceholder(final Exception e) {log().error(e, "Log exception after message");}
     private void exceptionBeforeErrorMessage(final Exception e) {log().error(e, "Log exception after message");}
-    private void exceptionBeforeErrorMessageWithPlaceholder(final Exception e) {log().error(e, "Log exception after message {}", new Object());}
 }
