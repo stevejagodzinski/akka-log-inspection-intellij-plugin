@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 public class Slf4jClass {
     private static final Logger LOG = LoggerFactory.getLogger(Slf4jClass.class);
 
-    public static void handleException(final Exception e) {
+    public static void handleExtraPlaceholder(final Exception e) {
         LOG.error("Log the exception using a placeholder {} {}", new Object());
     }
 }
