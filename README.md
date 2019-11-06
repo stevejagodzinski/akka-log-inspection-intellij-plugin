@@ -36,3 +36,11 @@ In the next example too many arguments are passed to the log method:
 log().info("Message {} received from {}", message, sender(), System.currentTimeMillis());
 ```
 With this plugin, such violations will be highlighted within the IntelliJ IDE so that you can know about, and correct these issues early-on.
+
+Even within invocations to Akka's logging framework where the Throwable is provided as a placeholder parameter, the stacktrace will not be provided in the log:
+```java
+log().error("Some message{}, e")
+log().warning("Some message{}, e")
+log().info("Some message{}, e")
+```
+Currently this plugin can detect this condition in the log().error case, and will provide a warning.
