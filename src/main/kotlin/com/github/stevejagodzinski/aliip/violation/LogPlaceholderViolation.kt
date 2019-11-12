@@ -1,20 +1,20 @@
 package com.github.stevejagodzinski.aliip.violation
 
-import com.github.stevejagodzinski.aliip.counters.CountParameters
-import com.github.stevejagodzinski.aliip.counters.CountPlaceholders
-import com.github.stevejagodzinski.aliip.filters.FindTemplate
+import com.github.stevejagodzinski.aliip.functions.countParameters
+import com.github.stevejagodzinski.aliip.functions.countPlaceholders
+import com.github.stevejagodzinski.aliip.functions.findTemplate
 import com.intellij.psi.PsiMethodCallExpression
 
 class LogPlaceholderViolation(logExpression: PsiMethodCallExpression) : Violation(logExpression) {
-    private val templateValue = FindTemplate.findTemplate(logExpression)
+    private val templateValue = findTemplate(logExpression)
 
     val placeholders = if (templateValue != null) {
-        CountPlaceholders.countPlaceholders(templateValue)
+        countPlaceholders(templateValue)
     } else {
         0
     }
 
-    val parameters = CountParameters.countParameters(logExpression)
+    val parameters = countParameters(logExpression)
 
     override fun hasViolation(): Boolean {
         return placeholders != parameters

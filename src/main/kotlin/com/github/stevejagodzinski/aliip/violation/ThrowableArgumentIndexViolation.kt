@@ -1,10 +1,10 @@
 package com.github.stevejagodzinski.aliip.violation
 
-import com.github.stevejagodzinski.aliip.index.ThrowableIndex
+import com.github.stevejagodzinski.aliip.functions.throwableIndex
 import com.intellij.psi.PsiMethodCallExpression
 
 class ThrowableArgumentIndexViolation(logExpression: PsiMethodCallExpression) : Violation(logExpression) {
-    val throwableIndex = ThrowableIndex.throwableIndex(logExpression)
+    val throwableIndex = throwableIndex(logExpression)
 
     override fun description(): String {
         return "Throwable at argument ($throwableIndex) should be the first argument to log().error(Throwable, String, Object...)"

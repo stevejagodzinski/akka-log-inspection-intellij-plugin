@@ -1,6 +1,6 @@
 package com.github.stevejagodzinski.aliip.inspection.visitor
 
-import com.github.stevejagodzinski.aliip.predicates.IsLogMethod.isLogMethod
+import com.github.stevejagodzinski.aliip.functions.isLogMethod
 import com.github.stevejagodzinski.aliip.violation.Violation
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.JavaElementVisitor
