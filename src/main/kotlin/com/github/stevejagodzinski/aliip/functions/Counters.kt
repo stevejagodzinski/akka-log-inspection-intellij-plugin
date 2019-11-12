@@ -2,12 +2,12 @@ package com.github.stevejagodzinski.aliip.functions
 
 import com.intellij.psi.PsiMethodCallExpression
 
-fun countParameters(logExpression: PsiMethodCallExpression): Int {
-    val templateIndex = templateIndex(logExpression)
-    val numberOfMethodParameters = logExpression.argumentList.expressionCount
+fun PsiMethodCallExpression.countParameters(): Int {
+    val templateIndex = templateIndex()
+    val numberOfMethodParameters = argumentList.expressionCount
     return numberOfMethodParameters - templateIndex - 1
 }
 
-fun countPlaceholders(template: String): Int {
-    return template.split("{}").size - 1
+fun String.countPlaceholders(): Int {
+    return split("{}").size - 1
 }

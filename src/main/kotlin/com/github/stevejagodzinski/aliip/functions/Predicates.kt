@@ -5,30 +5,30 @@ import com.intellij.psi.PsiExpression
 import com.intellij.psi.PsiMethodCallExpression
 import com.intellij.psi.PsiType
 
-fun isLogMethod(expression: PsiMethodCallExpression?): Boolean {
-    val returnType = getReturnType(expression)
-    val loggingAdapterType = PsiClassType.getTypeByName("akka.event.LoggingAdapter", expression!!.project, expression.resolveScope)
+fun PsiMethodCallExpression.isLogMethod(): Boolean {
+    val returnType = getReturnType()
+    val loggingAdapterType = PsiClassType.getTypeByName("akka.event.LoggingAdapter", project, resolveScope)
     return returnType?.let { loggingAdapterType.isAssignableFrom(it) } ?: false
 }
 
-fun isString(type: PsiType?, expression: PsiExpression): Boolean {
-    val stringType = PsiClassType.getTypeByName("java.lang.String", expression.project, expression.resolveScope)
+fun PsiExpression.isString(type: PsiType?): Boolean {
+    val stringType = PsiClassType.getTypeByName("java.lang.String", project, resolveScope)
     return type?.let { stringType.isAssignableFrom(it) } ?: false
 }
 
-fun isString(expression: PsiExpression): Boolean {
-    return isString(expression.type, expression)
+fun PsiExpression.isString(): Boolean {
+    return isString(type)
 }
 
-fun isThrowable(type: PsiType?, expression: PsiExpression): Boolean {
-    val throwableType = PsiClassType.getTypeByName("java.lang.Throwable", expression.project, expression.resolveScope)
+fun PsiExpression.isThrowable(type: PsiType?): Boolean {
+    val throwableType = PsiClassType.getTypeByName("java.lang.Throwable", project, resolveScope)
     return type?.let { throwableType.isAssignableFrom(it) } ?: false
 }
 
-fun isThrowable(expression: PsiExpression): Boolean {
-    return isThrowable(expression.type, expression)
+fun PsiExpression.isThrowable(): Boolean {
+    return isThrowable(type)
 }
 
-private fun getReturnType(expression: PsiMethodCallExpression?): PsiType? {
-    return expression?.methodExpression?.qualifierExpression?.type
+private fun PsiMethodCallExpression.getReturnType(): PsiType? {
+    return methodExpression.qualifierExpression?.type
 }

@@ -2,10 +2,10 @@ package com.github.stevejagodzinski.aliip.functions
 
 import com.intellij.psi.PsiMethodCallExpression
 
-fun templateIndex(expression: PsiMethodCallExpression): Int {
-    return expression.argumentList.expressions.indexOfFirst { x -> isString(x) }
+fun PsiMethodCallExpression.templateIndex(): Int {
+    return argumentList.expressions.indexOfFirst { x -> x.isString() }
 }
 
-fun throwableIndex(expression: PsiMethodCallExpression): Int {
-    return expression.argumentList.expressions.indexOfFirst { x -> isThrowable(x) }
+fun PsiMethodCallExpression.throwableIndex(): Int {
+    return argumentList.expressions.indexOfFirst { x -> x.isThrowable() }
 }

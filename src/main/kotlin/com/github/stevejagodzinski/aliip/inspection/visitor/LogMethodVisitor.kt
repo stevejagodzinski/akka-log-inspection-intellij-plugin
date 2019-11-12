@@ -23,7 +23,7 @@ open class LogMethodVisitor(
     }
 
     open fun shouldVisit(expression: PsiMethodCallExpression?): Boolean {
-        return isLogMethod(expression)
+        return expression?.isLogMethod() ?: false
     }
 
     private fun violate(expression: PsiMethodCallExpression, description: String) {

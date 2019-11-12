@@ -4,8 +4,8 @@ import com.intellij.psi.PsiExpression
 import com.intellij.psi.PsiLiteralValue
 import com.intellij.psi.PsiMethodCallExpression
 
-fun findTemplate(expression: PsiMethodCallExpression): String? {
-    val templatePsiExpression = findTemplateExpression(expression)
+fun PsiMethodCallExpression.findTemplate(): String? {
+    val templatePsiExpression = findTemplateExpression()
 
     if (templatePsiExpression is PsiLiteralValue) {
         val value = templatePsiExpression.value
@@ -17,6 +17,6 @@ fun findTemplate(expression: PsiMethodCallExpression): String? {
     return null
 }
 
-private fun findTemplateExpression(expression: PsiMethodCallExpression): PsiExpression? {
-    return expression.argumentList.expressions.firstOrNull { x -> isString(x) }
+private fun PsiMethodCallExpression.findTemplateExpression(): PsiExpression? {
+    return argumentList.expressions.firstOrNull { x -> x.isString() }
 }

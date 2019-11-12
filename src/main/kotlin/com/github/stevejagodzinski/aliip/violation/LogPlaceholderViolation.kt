@@ -6,15 +6,11 @@ import com.github.stevejagodzinski.aliip.functions.findTemplate
 import com.intellij.psi.PsiMethodCallExpression
 
 class LogPlaceholderViolation(logExpression: PsiMethodCallExpression) : Violation(logExpression) {
-    private val templateValue = findTemplate(logExpression)
+    private val templateValue = logExpression.findTemplate()
 
-    val placeholders = if (templateValue != null) {
-        countPlaceholders(templateValue)
-    } else {
-        0
-    }
+    val placeholders = templateValue?.countPlaceholders() ?: 0
 
-    val parameters = countParameters(logExpression)
+    val parameters = logExpression.countParameters()
 
     override fun hasViolation(): Boolean {
         return placeholders != parameters
