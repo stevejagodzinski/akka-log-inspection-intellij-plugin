@@ -21,8 +21,7 @@ class LogPlaceholderViolation(logExpression: PsiMethodCallExpression) : Violatio
     }
 
     override fun description(): String {
-        val prefix =  prefix()
-        return "$prefix arguments provided ($parameters) than placeholders specified ($placeholders)"
+        return "${prefix()} arguments provided ($parameters) than placeholders specified ($placeholders)"
     }
 
     private fun prefix(): String {
