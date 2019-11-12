@@ -15,7 +15,7 @@ open class LogMethodVisitor(
         super.visitMethodCallExpression(expression)
 
         if (shouldVisit(expression)) {
-            val violationType = createViolation.invoke(expression!!)
+            val violationType = createViolation(expression!!)
             if (violationType.hasViolation()) {
                 violate(violationType.logExpression, violationType.description())
             }
