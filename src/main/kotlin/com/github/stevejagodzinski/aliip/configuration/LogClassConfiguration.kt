@@ -1,8 +1,9 @@
 package com.github.stevejagodzinski.aliip.configuration
 
+import com.github.stevejagodzinski.aliip.configuration.component.LogClassConfigurationComponent
 import com.intellij.openapi.options.SearchableConfigurable
 import javax.swing.JComponent
-import javax.swing.JPanel
+
 
 class LogClassConfiguration : SearchableConfigurable {
     override fun isModified(): Boolean {
@@ -22,6 +23,6 @@ class LogClassConfiguration : SearchableConfigurable {
     }
 
     override fun createComponent(): JComponent? {
-        return JPanel()
+        return LogClassConfigurationComponent()
     }
 }
