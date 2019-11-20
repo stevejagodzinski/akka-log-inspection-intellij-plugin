@@ -11,6 +11,10 @@ import javax.swing.JTextField
 
 class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLayout()) {
 
+    companion object {
+        const val LABEL_VALUE = "Additional Akka Log Class"
+    }
+
     val textField: JTextField
 
     init {
@@ -25,7 +29,7 @@ class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLa
     }
 
     private fun createLabel() {
-        val component = JBLabel("Additional Akka Log Class:")
+        val component = JBLabel("$LABEL_VALUE:")
         add(component, GridBagConstraints())
     }
 
