@@ -7,7 +7,7 @@ import javax.swing.JLabel
 import javax.swing.JPanel
 import javax.swing.JTextField
 
-class LogClassConfigurationComponent() : JPanel(GridBagLayout()) {
+class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
     init {
         val label = JLabel("Additional Akka Log Class:")
         val labelGbc = GridBagConstraints()
@@ -16,6 +16,7 @@ class LogClassConfigurationComponent() : JPanel(GridBagLayout()) {
         val field = JTextField()
         val fieldGbc = GridBagConstraints()
         fieldGbc.fill = HORIZONTAL
+        fieldGbc.weighty = 1.0
         add(field, fieldGbc)
     }
 }
