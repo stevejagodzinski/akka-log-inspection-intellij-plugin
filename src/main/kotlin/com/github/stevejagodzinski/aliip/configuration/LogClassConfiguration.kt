@@ -11,7 +11,7 @@ import javax.swing.JComponent
 class LogClassConfiguration(project: Project) : SearchableConfigurable {
 
     companion object {
-        val KEY = "com.github.stevejagodzinski.aliip.configuration.logClass"
+        const val KEY = "com.github.stevejagodzinski.aliip.configuration.logClass"
     }
 
     private val propertiesComponent = PropertiesComponent.getInstance(project)
