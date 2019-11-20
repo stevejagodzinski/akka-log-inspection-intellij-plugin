@@ -47,6 +47,7 @@
           displayName="Akka"
           groupId="language"
           instance="com.github.stevejagodzinski.aliip.configuration.LogClassConfiguration"
+          id="com.github.stevejagodzinski.allip.log-class"
         />
 
     </extensions>
