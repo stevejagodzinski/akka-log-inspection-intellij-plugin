@@ -9,8 +9,8 @@ import javax.swing.JComponent
 
 class LogClassConfiguration(project: Project) : SearchableConfigurable {
 
-    private val component = LogClassConfigurationComponent()
     private val settings = Settings.getInstance(project)
+    private val component = LogClassConfigurationComponent(settings.state.logClass?.nullize())
 
     override fun isModified(): Boolean {
         return component.getLogClass()?.nullize() != settings.state.logClass?.nullize()

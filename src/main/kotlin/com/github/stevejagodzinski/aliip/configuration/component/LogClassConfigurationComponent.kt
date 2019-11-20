@@ -10,13 +10,13 @@ import java.awt.GridBagLayout
 import javax.swing.JPanel
 import javax.swing.JTextField
 
-class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
+class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLayout()) {
 
     val textField: JTextField
 
     init {
         createLabel()
-        this.textField = createTextField()
+        this.textField = createTextField(logClass)
 
         createListBox()
     }
@@ -31,8 +31,9 @@ class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
         add(label, labelGbc)
     }
 
-    private fun createTextField(): JTextField {
+    private fun createTextField(logClass: String?): JTextField {
         val field = JBTextField()
+        field.text = logClass
         val fieldGbc = GridBagConstraints()
         fieldGbc.fill = HORIZONTAL
         fieldGbc.weightx = 1.0
