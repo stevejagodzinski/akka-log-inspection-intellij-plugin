@@ -25,30 +25,30 @@ class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLa
     }
 
     private fun createLabel() {
-        val label = JBLabel("Additional Akka Log Class:")
-        val labelGbc = GridBagConstraints()
-        add(label, labelGbc)
+        val component = JBLabel("Additional Akka Log Class:")
+        val constraints = GridBagConstraints()
+        add(component, constraints)
     }
 
     private fun createTextField(logClass: String?): JTextField {
-        val field = JBTextField()
-        field.text = logClass
-        val fieldGbc = GridBagConstraints()
-        fieldGbc.fill = HORIZONTAL
-        fieldGbc.weightx = 1.0
-        add(field, fieldGbc)
-        return field
+        val component = JBTextField()
+        component.text = logClass
+        val constraints = GridBagConstraints()
+        constraints.fill = HORIZONTAL
+        constraints.weightx = 1.0
+        add(component, constraints)
+        return component
     }
 
     private fun createFiller() {
-        val list = JBLabel()
-        val listGbc = GridBagConstraints()
-        listGbc.gridwidth = 2
-        listGbc.fill = BOTH
-        listGbc.gridx = 0
-        listGbc.gridy = 1
-        listGbc.weightx = 1.0
-        listGbc.weighty = 1.0
-        add(list, listGbc)
+        val component = JBLabel()
+        val constraints = GridBagConstraints()
+        constraints.gridwidth = 2
+        constraints.fill = BOTH
+        constraints.gridx = 0
+        constraints.gridy = 1
+        constraints.weightx = 1.0
+        constraints.weighty = 1.0
+        add(component, constraints)
     }
 }
