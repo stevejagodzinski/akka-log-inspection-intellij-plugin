@@ -17,7 +17,7 @@ class LogClassConfiguration(project: Project) : SearchableConfigurable {
     }
 
     override fun getId(): String {
-        return "com.github.stevejagodzinski.allip.log-class"
+        return "com.github.stevejagodzinski.aliip.log-class"
     }
 
     override fun getDisplayName(): String {

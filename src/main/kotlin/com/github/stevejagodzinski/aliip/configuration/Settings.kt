@@ -12,7 +12,7 @@ data class LogClassSettings(val logClass: String? = null)
 @State(
     name = "com.github.stevejagodzinski.aliip.configuration.Settings",
     storages = [
-        Storage(value = "/allip.xml")
+        Storage(value = "/aliip.xml")
     ]
 )
 class Settings : PersistentStateComponent<LogClassSettings> {
