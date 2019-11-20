@@ -16,7 +16,7 @@ class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
         val field = JTextField()
         val fieldGbc = GridBagConstraints()
         fieldGbc.fill = HORIZONTAL
-        fieldGbc.weighty = 1.0
+        fieldGbc.weightx = 1.0
         add(field, fieldGbc)
     }
 }
