@@ -18,7 +18,7 @@ class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLa
         createLabel()
         this.textField = createTextField(logClass)
 
-        createListBox()
+        createFiller()
     }
 
     fun getLogClass(): String? {
@@ -41,8 +41,8 @@ class LogClassConfigurationComponent(logClass: String? = null): JPanel(GridBagLa
         return field
     }
 
-    private fun createListBox() {
-        val list = JBList<String>()
+    private fun createFiller() {
+        val list = JBLabel()
         val listGbc = GridBagConstraints()
         listGbc.gridwidth = 2
         listGbc.fill = BOTH
