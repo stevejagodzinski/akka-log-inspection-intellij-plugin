@@ -8,13 +8,21 @@ import java.awt.GridBagConstraints.BOTH
 import java.awt.GridBagConstraints.HORIZONTAL
 import java.awt.GridBagLayout
 import javax.swing.JPanel
+import javax.swing.JTextField
 
 class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
+
+    val textField: JTextField
+
     init {
         createLabel()
-        createTextField()
+        this.textField = createTextField()
 
         createListBox()
+    }
+
+    fun getLogClass(): String? {
+        return textField.text.trim()
     }
 
     private fun createLabel() {
@@ -23,12 +31,13 @@ class LogClassConfigurationComponent: JPanel(GridBagLayout()) {
         add(label, labelGbc)
     }
 
-    private fun createTextField() {
+    private fun createTextField(): JTextField {
         val field = JBTextField()
         val fieldGbc = GridBagConstraints()
         fieldGbc.fill = HORIZONTAL
         fieldGbc.weightx = 1.0
         add(field, fieldGbc)
+        return field
     }
 
     private fun createListBox() {

@@ -2,12 +2,18 @@ package com.github.stevejagodzinski.aliip.configuration
 
 import com.github.stevejagodzinski.aliip.configuration.component.LogClassConfigurationComponent
 import com.intellij.openapi.options.SearchableConfigurable
+import com.intellij.openapi.project.Project
+import com.intellij.util.text.nullize
 import javax.swing.JComponent
 
 
-class LogClassConfiguration : SearchableConfigurable {
+class LogClassConfiguration(project: Project) : SearchableConfigurable {
+
+    private val component = LogClassConfigurationComponent()
+    private val settings = Settings.getInstance(project)
+
     override fun isModified(): Boolean {
-        return false
+        return component.getLogClass()?.nullize() != settings.state.logClass?.nullize()
     }
 
     override fun getId(): String {
@@ -19,10 +25,10 @@ class LogClassConfiguration : SearchableConfigurable {
     }
 
     override fun apply() {
-        // NO OP
+        settings.setLogClass(component.getLogClass())
     }
 
     override fun createComponent(): JComponent? {
-        return LogClassConfigurationComponent()
+        return component
     }
 }
