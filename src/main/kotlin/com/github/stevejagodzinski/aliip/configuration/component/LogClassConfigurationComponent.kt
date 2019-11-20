@@ -1,7 +1,6 @@
 package com.github.stevejagodzinski.aliip.configuration.component
 
 import com.intellij.ui.components.JBLabel
-import com.intellij.ui.components.JBList
 import com.intellij.ui.components.JBTextField
 import java.awt.GridBagConstraints
 import java.awt.GridBagConstraints.BOTH
