@@ -1,7 +1,6 @@
 package com.github.stevejagodzinski.aliip.configuration
 
 import com.github.stevejagodzinski.aliip.configuration.component.LogClassConfigurationComponent
-import com.intellij.ide.util.PropertiesComponent
 import com.intellij.openapi.options.SearchableConfigurable
 import com.intellij.openapi.project.Project
 import com.intellij.util.text.nullize
@@ -9,12 +8,7 @@ import javax.swing.JComponent
 
 
 class LogClassConfiguration(project: Project) : SearchableConfigurable {
-
-    companion object {
-        const val KEY = "com.github.stevejagodzinski.aliip.configuration.logClass"
-    }
-
-    private val propertiesComponent = PropertiesComponent.getInstance(project)
+    private val settings = LogClassSettings(project)
     private val component = LogClassConfigurationComponent(getOldLogClass())
 
     override fun isModified(): Boolean {
@@ -30,7 +24,7 @@ class LogClassConfiguration(project: Project) : SearchableConfigurable {
     }
 
     override fun apply() {
-        propertiesComponent.setValue(KEY, getNewLogClass())
+        settings.setLogClass(getNewLogClass())
     }
 
     override fun createComponent(): JComponent? {
@@ -42,6 +36,6 @@ class LogClassConfiguration(project: Project) : SearchableConfigurable {
     }
 
     private fun getOldLogClass(): String? {
-        return propertiesComponent.getValue(KEY)
+        return settings.getLogClass()
     }
 }
