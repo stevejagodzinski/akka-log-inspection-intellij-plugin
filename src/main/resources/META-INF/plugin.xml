@@ -43,6 +43,13 @@
                 shortName="log-error-throwable"
         />
 
+        <projectConfigurable
+          displayName="Akka"
+          groupId="language"
+          instance="com.github.stevejagodzinski.aliip.configuration.LogClassConfiguration"
+          id="com.github.stevejagodzinski.aliip.log-class"
+        />
+
     </extensions>
 
     <actions>
