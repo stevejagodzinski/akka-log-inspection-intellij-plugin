@@ -1,13 +1,19 @@
 package com.github.stevejagodzinski.aliip.functions
 
+import com.github.stevejagodzinski.aliip.configuration.LogClassSettings
 import com.intellij.psi.PsiClassType
 import com.intellij.psi.PsiExpression
 import com.intellij.psi.PsiMethodCallExpression
 import com.intellij.psi.PsiType
+import com.intellij.util.text.nullize
 
 fun PsiMethodCallExpression.isLogMethod(): Boolean {
+    return getLogMethodTypes().find { logClass -> isAssignableFrom(logClass) } != null
+}
+
+fun PsiMethodCallExpression.isAssignableFrom(className: String): Boolean {
     val returnType = getReturnType()
-    val loggingAdapterType = PsiClassType.getTypeByName("akka.event.LoggingAdapter", project, resolveScope)
+    val loggingAdapterType = PsiClassType.getTypeByName(className, project, resolveScope)
     return returnType?.let { loggingAdapterType.isAssignableFrom(it) } ?: false
 }
 
@@ -27,6 +33,16 @@ fun PsiExpression.isThrowable(type: PsiType?): Boolean {
 
 fun PsiExpression.isThrowable(): Boolean {
     return isThrowable(type)
+}
+
+private fun PsiMethodCallExpression.getLogMethodTypes(): Set<String> {
+    val logClass = LogClassSettings(project).getLogClass().nullize()
+
+    return if (logClass != null) {
+        setOf(logClass, "akka.event.LoggingAdapter")
+    } else {
+        setOf("akka.event.LoggingAdapter")
+    }
 }
 
 private fun PsiMethodCallExpression.getReturnType(): PsiType? {
