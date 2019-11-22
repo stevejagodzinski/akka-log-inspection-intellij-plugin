@@ -39,7 +39,7 @@ private fun PsiMethodCallExpression.getLogMethodTypes(): Set<String> {
     val logClass = LogClassSettings(project).getLogClass().nullize()
 
     return if (logClass != null) {
-        setOf("akka.event.LoggingAdapter", logClass)
+        setOf(logClass, "akka.event.LoggingAdapter")
     } else {
         setOf("akka.event.LoggingAdapter")
     }
