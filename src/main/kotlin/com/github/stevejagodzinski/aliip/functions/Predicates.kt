@@ -8,10 +8,13 @@ import com.intellij.psi.PsiType
 import com.intellij.util.text.nullize
 
 fun PsiMethodCallExpression.isLogMethod(): Boolean {
-    return getLogMethodTypes().find { logType ->
-        val loggingAdapterType = PsiClassType.getTypeByName(logType, project, resolveScope)
-        return getReturnType()?.let { loggingAdapterType.isAssignableFrom(it) } ?: false
-    } != null
+    return getLogMethodTypes().find { logClass -> isAssignableFrom(logClass) } != null
+}
+
+fun PsiMethodCallExpression.isAssignableFrom(className: String): Boolean {
+    val returnType = getReturnType()
+    val loggingAdapterType = PsiClassType.getTypeByName(className, project, resolveScope)
+    return returnType?.let { loggingAdapterType.isAssignableFrom(it) } ?: false
 }
 
 fun PsiExpression.isString(type: PsiType?): Boolean {
