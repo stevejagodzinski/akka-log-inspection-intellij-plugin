@@ -7,7 +7,7 @@ This IntelliJ plugin provides code inspections to highlight invocations to Akka'
 #### Directly From Your IDE
 Settings/Preferences -> Plugins -> Marketplace -> Search -> Akka Log Inspections
 
-Don't see it? You may be be running an un-supported version of IntelliJ.
+Don't see it? You may be be running an un-supported version of IntelliJ. \
 Currently versions 2019.2 - 2019.3.2+ are supported.
 #### From The JetBrainsPlugin Repo
 [Akka Log Inspections](https://plugins.jetbrains.com/plugin/13266-akka-log-inspections/)
