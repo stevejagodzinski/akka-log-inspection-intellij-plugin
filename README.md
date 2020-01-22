@@ -12,8 +12,8 @@ You may be be running an un-supported version of IntelliJ. \
 Currently versions 2019.2 - 2019.3.2+ are supported.
 
 ###### Need support for an older version?
-- Create a PR (Best option)
-- Open an Issue (Next best option)
+- Create a pull request. (Best option)
+- Open an issue. (Next best option)
 #### From The JetBrainsPlugin Repo
 [Akka Log Inspections](https://plugins.jetbrains.com/plugin/13266-akka-log-inspections/)
 
