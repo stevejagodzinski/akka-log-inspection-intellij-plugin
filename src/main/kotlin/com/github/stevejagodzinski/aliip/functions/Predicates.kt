@@ -7,7 +7,17 @@ import com.intellij.psi.PsiMethodCallExpression
 import com.intellij.psi.PsiType
 import com.intellij.util.text.nullize
 
+const val ERROR = "error"
+const val WARN = "warning"
+const val INFO = "info"
+const val DEBUG = "debug"
+val LOG_METHOD_NAMES = arrayOf(ERROR, WARN, INFO, DEBUG)
+
 fun PsiMethodCallExpression.isLogMethod(): Boolean {
+    return hasLogMethodType() && hasLogMethodName()
+}
+
+fun PsiMethodCallExpression.hasLogMethodType(): Boolean {
     return getLogMethodTypes().find { logClass -> isAssignableFrom(logClass) } != null
 }
 
@@ -33,6 +43,10 @@ fun PsiExpression.isThrowable(type: PsiType?): Boolean {
 
 fun PsiExpression.isThrowable(): Boolean {
     return isThrowable(type)
+}
+
+fun PsiMethodCallExpression.hasLogMethodName(): Boolean {
+    return LOG_METHOD_NAMES.contains(resolveMethod()?.name)
 }
 
 private fun PsiMethodCallExpression.getLogMethodTypes(): Set<String> {
