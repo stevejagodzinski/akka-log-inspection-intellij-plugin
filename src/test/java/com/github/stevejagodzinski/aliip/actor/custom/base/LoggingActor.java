@@ -33,7 +33,7 @@ public abstract class LoggingActor extends BaseActor {
       this.log.clearMDC();
     }
 
-    public MessageDiagnosticLoggingAdapter withDuration(Duration duration) {
+    public MessageDiagnosticLoggingAdapter enhance(Object with) {
       log.setMDC(Collections.emptyMap());
       return this;
     }
