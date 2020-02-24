@@ -9,7 +9,7 @@
     </description>
 
     <change-notes><![CDATA[
-        +Ability to configure a custom logger class for inspection.
+        -Fixed errant flagging of non-logging method calls to logger classes.
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
