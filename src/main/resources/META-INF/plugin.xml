@@ -9,11 +9,11 @@
     </description>
 
     <change-notes><![CDATA[
-        -Fixed errant flagging of non-logging method calls to logger classes.
+        - 1.2.5: Added support IntelliJ version 2020.1
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="192.0" until-build="193.*" />
+    <idea-version since-build="192.0" until-build="201.*" />
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

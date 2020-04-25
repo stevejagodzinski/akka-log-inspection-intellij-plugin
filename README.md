@@ -9,7 +9,7 @@ Settings/Preferences -> Plugins -> Marketplace -> Search -> Akka Log Inspections
 
 ##### Don't see it in the Marketplace? 
 You may be be running an un-supported version of IntelliJ. \
-Currently versions 2019.2 - 2019.3.2+ are supported.
+Currently versions 2019.2 - 2020.1.x are supported.
 
 ###### Need support for an older version?
 - Create a pull request. (Best option)
