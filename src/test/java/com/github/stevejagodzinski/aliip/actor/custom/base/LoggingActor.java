@@ -2,7 +2,6 @@ package com.github.stevejagodzinski.aliip.actor.custom.base;
 
 import akka.event.DiagnosticLoggingAdapter;
 import akka.event.Logging;
-import java.time.Duration;
 import java.util.Collections;
 import java.util.Map;
 
@@ -19,7 +18,7 @@ public abstract class LoggingActor extends BaseActor {
   }
 
   public static class MessageDiagnosticLoggingAdapter {
-    private DiagnosticLoggingAdapter log;
+    private final DiagnosticLoggingAdapter log;
 
     MessageDiagnosticLoggingAdapter(DiagnosticLoggingAdapter log) {
       this.log = log;
