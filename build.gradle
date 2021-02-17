@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.stevejagodzinski'
-version '1.2.7-SNAPSHOT'
+version '1.2.7'
 
 sourceCompatibility = 1.11
 
@@ -23,6 +23,6 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     plugins = ['java']
-    version '2020.2'
+    version '2020.3'
     updateSinceUntilBuild = false
 }
