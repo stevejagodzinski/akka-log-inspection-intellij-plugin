@@ -9,7 +9,7 @@
     </description>
 
     <change-notes><![CDATA[
-        - 1.2.7: Support IntelliJ version 2020.3+
+        - 1.2.8: Support IntelliJ version 2020.3+
     ]]></change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
