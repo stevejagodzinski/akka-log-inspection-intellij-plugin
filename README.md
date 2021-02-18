@@ -8,7 +8,7 @@ This IntelliJ plugin provides code inspections to highlight invocations to Akka'
 Settings/Preferences -> Plugins -> Marketplace -> Search -> Akka Log Inspections
 
 ##### Don't see it in the Marketplace? 
-You may be be running an un-supported version of IntelliJ. \
+You may be running an un-supported version of IntelliJ. \
 Currently versions 2020.3+ are supported.
 
 ###### Need support for an older version?
