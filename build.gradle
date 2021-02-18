@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'com.github.stevejagodzinski'
-version '1.2.9'
+version '1.2.10-SNAPSHOT'
 
 sourceCompatibility = 1.11
 
